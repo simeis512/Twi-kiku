@@ -1,0 +1,374 @@
+/* CSS Document */
+
+#playlist {
+}
+
+.tweet-container {
+	position: relative;
+	
+	margin: 12px;
+	padding: 8px;
+	
+	border-radius: 8px;
+	
+	border: solid 0 transparent;
+	
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+
+	transition: all 0.2s ease-in-out;
+}
+
+.now-playing {
+	padding: 6px;
+	
+	border: solid 2px #5cf;
+	
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,0.5);
+	
+	border-radius: 8px;
+}
+
+.left, .right {
+	display: inline-block;
+	
+	vertical-align: top;
+	
+	top: 0;
+}
+
+.left {
+	width: 80px;
+}
+
+.play-pause-button {
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+	
+	width: 80px;
+	height: 80px;
+	
+	border-radius: 50%;
+	
+	background: #fff;
+	
+	cursor: pointer;
+	
+	transition: all 0.2s ease-in-out;
+}
+
+.pause {
+	box-shadow: 0 4px 8px 1px rgba(0,0,0,0.3);
+	
+	transform: translateY(-2px);
+}
+
+.play {
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
+	
+	transform: translateY(2px);
+}
+
+.play:before, .play:after,
+.pause:before, .pause:after {
+	content: "";
+	
+	position: absolute;
+	
+	width: 0px;
+	height: 0px;
+	
+	border: solid 0 rgba(85, 85, 85, 0);
+	
+	transition: all 0.2s ease-in-out;
+}
+
+.play:before, .play:after {
+	border-left-width: 8px;
+	border-left-color: rgba(85, 85, 85, 1);
+}
+
+.play:before {
+	border-bottom-width: 30px;
+	border-bottom-color: rgba(85, 85, 85, 1);
+
+	transform: translateX(-8px);
+}
+
+.play:after {
+	border-top-width: 30px;
+	border-top-color: rgba(85, 85, 85, 1);
+
+	transform: translateX(8px);
+}
+
+.pause:before, .pause:after {
+	border-left-width: 30px;
+	border-left-color: rgba(85, 85, 85, 1);
+}
+
+.pause:before {
+	border-top-width: 15px;
+	
+	transform: translate(4px, -7px);
+}
+
+.pause:after {
+	border-bottom-width: 15px;
+	
+	transform: translate(4px, 7px);
+}
+
+.right {
+	padding-top: 4px;
+	padding-left: 8px;
+	
+	width: calc(100% - 80px);
+}
+
+.user {
+	display: flex;
+	
+	width: calc(100% - 40px);
+}
+
+.user a {
+	display: flex;
+	align-content: center;
+	
+	width: calc(100% - 110px);
+	
+	text-decoration: none;
+}
+
+.icon {
+	margin-right: 8px;
+	
+	width: 50px;
+	min-width: 50px;
+	height: 50px;
+}
+
+.icon img {
+	width: 100%;
+	height: 100%;
+	
+	border-radius: 50%;
+}
+
+.user-info {
+	display: flex;
+	flex-direction: column;
+	
+	width: calc(100% - 60px);
+	
+	justify-content: center;
+}
+
+.user-name {
+	color: #222;
+	font-size: 22px;
+	
+	line-height: 30px;
+	
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.screen-name {
+	color: #999;
+	font-size: 18px;
+	
+	line-height: 24px;
+}
+
+.screen-name:before {
+	content: '@';
+}
+
+.follow-button {
+	margin-left: 10px;
+}
+
+.tweet-text-container {
+	position: relative;
+}
+
+.tweet-text {
+	cursor: zoom-out;
+}
+
+.tweet-text:after {
+	content: "▲";
+	
+	position: absolute;
+	
+	top: 0;
+	right: 0;
+	
+	width: 68px;
+	height: 34px;
+	
+	background: linear-gradient(90deg, rgba(255,255,255,0), #fff);
+	
+	color: rgba(0,0,0,0.7);
+	text-shadow: 0 0 4px #fff;
+	
+	text-align: right;
+	line-height: 34px;
+}
+
+.tweet-text div {
+	display: inline-flex;
+	flex-direction: column;
+	
+	padding: 4px;
+}
+
+.tweet-text div p {
+	font-size: 20px;
+	line-height: 26px;
+	
+	word-wrap: break-word;
+}
+
+.marquee {
+	overflow: hidden;
+	
+	cursor: zoom-in;
+}
+
+.marquee:before {
+	content: "";
+	
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	z-index: 10;
+	
+	width: 68px;
+	height: 34px;
+	
+	background: linear-gradient(90deg, #fff, rgba(255,255,255,0));
+}
+
+.marquee:after {
+	content: "▼";
+}
+
+.marquee div {
+	flex-direction: row;
+	
+	margin: 0;
+	padding-left: 100%;
+	
+	white-space: nowrap;
+	
+	animation: marquee linear infinite;
+}
+
+.marquee div p {
+	display: block;
+}
+
+.tweet-link {
+	font-size: 16px;
+}
+
+.service {
+	position: absolute;
+	
+	top: 0;
+	right: 0;
+	
+	padding: 0 16px;
+	
+	min-width: 60px;
+	height: 60px;
+	
+	border-radius: 0 8px 0;
+	
+	color: #fff;
+	
+	text-align: center;
+	line-height: 60px;
+}
+
+.service-twitter {
+	background: #00afe9;
+}
+
+.service-soundcloud {
+	background: #f80;
+}
+
+.service-youtube {
+	background: #f01;
+}
+
+.service-creofuga {
+	background: #000;
+	color: #00c4fc;
+}
+
+.service-mqube {
+	background: #181818;
+}
+
+.service-hearthisat {
+	background: #d40014;
+}
+
+.service-allihoopa {
+	background: linear-gradient(90deg, #00d746, #ff40f9);;
+}
+
+.service-bandcamp {
+	background: #629aa9;
+}
+
+.service-mp3 {
+	background: #555;
+}
+
+#next-loader {
+	padding: 8px;
+	margin: 12px;
+	margin-left: 8px;
+	
+	/*width: 20px;
+	height: 20px;*/
+	
+	line-height: 20px;
+}
+
+#next-loader:before {
+	content: ' ';
+	
+	position: absolute;
+	
+	width: 20px;
+	height: 20px;
+	
+	left: 24px;
+	
+	border-radius: 50%;
+	
+	border: solid 2px #5af;
+	border-right-color: transparent;
+	
+	animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+	from { transform: rotate(0deg); }
+	to   { transform: rotate(360deg); }
+}
+
+@keyframes marquee {
+  from { transform:translate(0);     }
+  to   { transform:translate(-100%); }
+}
