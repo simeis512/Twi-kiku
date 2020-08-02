@@ -105,5 +105,3 @@ function generatePlayer($service, $url) {
 	
 	return '<div class="'. $service .'" data-url="'. $url .'">'. $music .'</div>';
 }
-
-?>

@@ -12,5 +12,3 @@ if (realpath($_SERVER['SCRIPT_FILENAME']) == realpath(__FILE__)) {
 		die(json_encode(['errors'=>[['code'=>'null','message'=>$e->getMessage()]]]));
 	}
 }
-
-?>

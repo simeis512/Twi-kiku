@@ -39,14 +39,11 @@ function doRetweet($post) {
 	);
 	
 	if ($twitter->getLastHttpCode() == 200) {
-		// ツイート成功
-				// ツイート成功
+		// リツイート成功
 		echo json_encode(['success'=>[['message'=>'Tweet retweeted.']]]);
 	} else {
-		// ツイート失敗
+		// リツイート失敗
 		echo json_encode($result);
 
 	}
 }
-
-?>

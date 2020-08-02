@@ -45,5 +45,3 @@ if ($_SESSION['oauth_token'] == $_GET['oauth_token'] and $_GET['oauth_verifier']
 	header('Location: ..');
 	exit();
 }
-
-?>

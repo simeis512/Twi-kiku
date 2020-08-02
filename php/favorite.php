@@ -44,12 +44,10 @@ function doFavorite($post) {
 	);
 	
 	if ($twitter->getLastHttpCode() == 200) {
-		// ツイート成功
+		// いいね成功
 		echo json_encode(['success'=>[['message'=>'Tweet favorited.']]]);
 	} else {
-		// ツイート失敗
+		// いいね失敗
 		echo json_encode($result);
 	}
 }
-
-?>

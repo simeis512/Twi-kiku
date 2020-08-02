@@ -44,12 +44,10 @@ function doFollow($post) {
 	);
 	
 	if ($twitter->getLastHttpCode() == 200) {
-		// ツイート成功
+		// フォロー成功
 		echo json_encode(['success'=>[['message'=>'User followed.']]]);
 	} else {
-		// ツイート失敗
+		// フォロー失敗
 		echo json_encode($result);
 	}
 }
-
-?>

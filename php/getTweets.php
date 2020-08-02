@@ -229,5 +229,3 @@ function debugPrint($text) {
 	global $isDebug;
 	if ($isDebug) print($text);
 }
-
-?>

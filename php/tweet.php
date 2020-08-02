@@ -55,5 +55,3 @@ function postTweet($post) {
 		echo json_encode($result);
 	}
 }
-
-?>
